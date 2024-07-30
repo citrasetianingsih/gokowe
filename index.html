@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Script HTML Bucin</title>
+    <style>
+        body {
+            background-color: #ffe6e6;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        .heart {
+            color: red;
+            font-size: 50px;
+        }
+        .message {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+        .button {
+            background-color: #ff6666;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            font-size: 16px;
+            margin: 20px 2px;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Halaman Bucin</h1>
+    <div class="heart">&#10084;&#65039;</div>
+    <div class="message">Klik tombol untuk pesan cinta!</div>
+    <button class="button" onclick="showMessage()">Klik Aku</button>
+    <div id="loveMessage"></div>
+    <script>
+        function showMessage() {
+            const messages = [
+                "Aku sayang kamu lebih dari kata-kata bisa ungkapkan.",
+                "Kamu adalah alasan aku tersenyum setiap hari.",
+                "Hidupku menjadi lebih indah sejak ada kamu.",
+                "Kamu adalah bintang di langitku.",
+                "Cintaku padamu tak akan pernah pudar."
+            ];
+            const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+            document.getElementById("loveMessage").innerHTML = `<p>${randomMessage}</p>`;
+        }
+    </script>
+</body>
+</html>
